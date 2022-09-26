@@ -2,6 +2,7 @@ import { extname } from 'path'
 
 import { TransformOptions as JestTransformOptions, Transformer } from '@jest/transform'
 import { Format, Loader, TransformOptions, transformSync } from 'esbuild'
+import type { createTransformer as babelCreateTransformer } from 'babel-jest';
 
 import { Options } from './options'
 import { getExt, loaders } from './utils'
@@ -64,7 +65,7 @@ const createTransformer = (options?: Options) => ({
   }
 })
 
-const transformer: Pick<Transformer, 'canInstrument' | 'createTransformer'> = {
+const transformer = {
   canInstrument: true,
   createTransformer
 }
