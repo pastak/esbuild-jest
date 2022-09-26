@@ -16,9 +16,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn build
-    - run: yarn test
+    - run: npm
+    - run: npm run build
+    - run: npm run test
       env:
         CI: true
   windows-latest:
@@ -34,9 +34,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn build
-    - run: yarn test
+    - run: npm
+    - run: npm run build
+    - run: npm run test
       env:
         CI: true
   macos-latest:
@@ -52,8 +52,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn build
-    - run: yarn test
+    - run: npm
+    - run: npm run build
+    - run: npm run test
       env:
         CI: true
