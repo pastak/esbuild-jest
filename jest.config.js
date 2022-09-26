@@ -13,5 +13,9 @@ module.exports = {
   /// This will resolve any tsconfig.compilerOptions.paths
   moduleNameMapper: hq.get('jest'),
   testPathIgnorePatterns: ['/node_modules/', '/dist/', '/types/' ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  snapshotFormat: {
+    escapeString: true,
+    printBasicPrototype: false
+  }
 }
