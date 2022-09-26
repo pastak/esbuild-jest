@@ -60,8 +60,8 @@ test('should have sourcemap with [jest.mock]', () => {
    expect(output.map).toEqual(      {
     version: 3,
     sources: [ 'index.spec.ts' ],
-    mappings: ';AAIA,cAAK,KAAK,WAAW;AACnB,SAAO;IACL;AACE,aAAO,CAAE;;;;AAPf,IAAA,WAAA,QAAA;AAEA,IAAA,SAAA,QAAA;;;;;;;;AAUA,KAAK,iCAAiC;AACpC,EAAA,IAAA,SAAA,QAAO,IAAA,OAAA,YAAW,QAAQ,CAAE;;',
-    names: [],
+    mappings: 'AAIA,YAAA,EAAKA,KAAK,WAAW,MAAM;AACzB,SAAO;IACLC,UAAU;AACR,aAAO,CAAE,KAAF;IACR;EAHI;AAKR,CAND;AAJA,IAAA,WAAA,QAAA,eAAA;AAEA,IAAA,SAAA,QAAA,SAAA;;;;;;;;AAUAC,KAAK,iCAAiC,MAAM;AAC1C,GAAA,GAAAC,SAAAA,SAAO,GAAAF,OAAAA,SAAA,CAAP,EAAkBG,QAAQ,CAAE,KAAF,CAA1B;AACD,CAFG;',
+    names: ['mock', 'display', 'test', 'expect', 'toEqual'],
     sourcesContent: null
   })
 })
@@ -84,7 +84,7 @@ test('should have sourcemap without [jest.mock]', () => {
   expect(output.map).toEqual({
     version: 3,
     sources: [ './examples/names-ts/index.ts' ],
-    mappings: 'AAAA;AAEO;AACL,SAAO;AAAA;',
+    mappings: 'AAAA,OAAO,WAAW;AAEX,SAAS,UAAU;AACxB,SAAO;AACT;',
     names: [],
     sourcesContent: null
   })
